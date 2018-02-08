@@ -1,1 +1,3 @@
-# trailze
+## Trailze
+Trailze is a community-based trail discovery and information sharing app that allows users to post real-time updates of their current hiking adventure. This app offers live navigation so that users can track their progress as they continue to hike. Hikers can place markers on the trail to indicate hazards and features such as bears, fallen trees, bird-nests, mud, waterfalls, and ice. Hiker profiles will allow Trailze to personalize their experience by providing them with curated hikes and trails that relate to their interests. Users are able to unlock achievements based off of elevation, distance, or trails hiked which can lead to free gear and/or trips through partnerships and sponsored events.
+

@@ -1,0 +1,21 @@
+Trailze Project SRS Evaluation
+==============================
+
+Nice job on this, a very good document.
+
+Carleen -- looks like you've really got this requirements thing nailed
+down!  Good coverage of the requirements, good breakdown of things, 
+proper language and all the grammar is correct, good descriptive 
+paragraphs for each of your components...  SWEET!!
+
+One thing to check is to be sure you only specify ONE requirement in each
+"shall" statement.  If you see the word "and" or "or" that *usually* means
+you could split that into two requirements, or perhaps a "shall" followed
+by a "will"....
+
+
+Deliverable D-02: 15% out of 15% = 100% which is an A-plus
+Deliverable D-05:  5% out of  5% = 100% which is an A-plus
+
+Keep up the good work!
+

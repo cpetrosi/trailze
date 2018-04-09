@@ -8,12 +8,11 @@ export default class UGC extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: '#ddd' }}>
       <TouchableHighlight>
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./closed-trail.png')}
+          source={require('./resources/closed-trail.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
@@ -21,7 +20,7 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./trail-condition.png')}
+          source={require('./resources/trail-condition.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
@@ -29,7 +28,7 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./wildlife.png')}
+          source={require('./resouces/wildlife.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
@@ -37,7 +36,7 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./plants.png')}
+          source={require('./resouces/plants.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
@@ -45,7 +44,7 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./tree-falling.png')}
+          source={require('./resources/tree-falling.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
@@ -53,7 +52,7 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./waterfall.png')}
+          source={require('./resources/waterfall.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
@@ -61,11 +60,10 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./icey.png')}
+          source={require('resources/./icey.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
-      </View>
     );
   }
 }

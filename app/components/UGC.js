@@ -28,7 +28,7 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./resouces/wildlife.png')}
+          source={require('./resources/wildlife.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
@@ -36,7 +36,7 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('./resouces/plants.png')}
+          source={require('./resources/plants.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>
@@ -60,7 +60,7 @@ export default class UGC extends React.Component {
         <Image
           style={styles.button}
           resizeMode='contain'
-          source={require('resources/./icey.png')}
+          source={require('./resources/icey.png')}
           onPress={this.onPress}
         />
       </TouchableHighlight>

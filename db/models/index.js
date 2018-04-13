@@ -1,10 +1,5 @@
 "use strict";
 
-const Feature = require("./feature");
-const Marker = require("./marker");
-const Hike = require("./hike");
+const Hazard = require("./hazard");
 
-Marker.hasOne(Feature);
-Hike.hasMany(Feature);
-
-module.exports = {Feature, Marker, Hike};
+module.exports = {Hazard};

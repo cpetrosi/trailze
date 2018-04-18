@@ -15,7 +15,7 @@ class SearchScreen extends React.Component {
     return (
       <View style={{ flex: 1, backgroundColor: '#ddd' }}>
         <AppHeader
-          headerText = "Trailze"
+          headerText="Trailze"
         />
         <SearchBar
           onPressSearch={this.onPressSearch}
@@ -30,9 +30,9 @@ class MapScreen extends React.Component {
     return (
       <View style={{ flex: 1, backgroundColor: '#ddd' }}>
         <AppHeader
-          headerText = "Trailze"
+          headerText="Trailze"
         />
-        <MapViews/>
+        <MapViews />
       </View>
     );
   }

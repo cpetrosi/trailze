@@ -7,15 +7,35 @@ const Form = require("../../db/models/marker");
 
 const router = require("express").Router();
 
-router.get("/add", function(req, res, next) {
+router.put("/add", function(req, res, next) {
     Marker.findOrCreate({
         where: {
-          lat:  req.query.lat
-          long:  req.query.long
-          feature_id:  req.query.f_id
+          lat:  req.query.lat,
+          long:  req.query.long,
+          feature_id:  req.query.f_id,
+          hike_id: req.query.hike_id
         }
     })
-    // add to hike
+    .then(result => {
+        res.status(200).send(result);
+    })
+    .catch(next);
+});
+
+router.get("/all", function(req, res, next) {
+    Marker.findAll()
+    .then(result => {
+        res.status(200).send(result);
+    })
+    .catch(next);
+});
+
+router.get("/hike", function(req, res, next) {
+    Marker.findAll({
+       where: {
+          hike_id: req.query.hike_id
+        }
+      })
     .then(result => {
         res.status(200).send(result);
     })

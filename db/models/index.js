@@ -5,6 +5,6 @@ const Marker = require("./marker");
 const Hike = require("./hike");
 
 Marker.hasOne(Feature);
-Hike.hasMany(Feature);
+Marker.hasOne(Hike);
 
 module.exports = {Feature, Marker, Hike};

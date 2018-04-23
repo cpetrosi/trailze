@@ -3,7 +3,8 @@
 **/
 
 const api = module.exports = require("express").Router();
-const features = require("./features");
+const markers = require("./markers");
+const hikes = require("./hikes");
 
 api
     .get("/express-test", (req, res) => res.send({express: "working!"})) //demo route to prove api is working

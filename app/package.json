@@ -9,7 +9,7 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
+    "start": "react-native-scripts start && node server/index.js",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
@@ -30,5 +30,6 @@
     "react-native-extended-stylesheet": "^0.8.1",
     "react-native-maps": "^0.21.0",
     "react-navigation": "^1.5.11"
-  }
+  },
+  "proxy": "http://localhost:8000"
 }

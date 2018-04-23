@@ -4,8 +4,8 @@ const Sequelize = require('sequelize')
 const pkg = require('../package.json')
 
 // create the database instance
-const db = module.exports =new Sequelize('dbname', 'username', 'password', {
-  host: 'Localhost',
+const db = module.exports =new Sequelize('trailzedb', 'trailze_admin', 'password', {
+  host: 'ebachoura.cl09ecb6yf3w.us-east-1.rds.amazonaws.com',
   dialect: 'postgres',
   logging: debug, // export DEBUG=sql in the environment to get SQL queries
   define: {

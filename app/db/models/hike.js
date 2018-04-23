@@ -9,7 +9,9 @@ const Hike = db.define('hike', {
    average_rating: { type: Sequelize.INTEGER },
    num_of_raters: { type: Sequelize.INTEGER },
    lat: { type: Sequelize.FLOAT },
-   long: { type: Sequelize.FLOAT }
+   long: { type: Sequelize.FLOAT },
+   description: { type: Sequelize.TEXT },
+   image_url: { type: Sequelize.TEXT }
  });
 
  module.exports = Marker;

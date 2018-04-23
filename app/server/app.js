@@ -17,7 +17,7 @@ const port  = process.env.PORT || 8080;
 // ================================================================================================
 
 
-// const db = require("../db/index");
+const db = require("../db/index");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));

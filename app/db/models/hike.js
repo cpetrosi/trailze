@@ -14,4 +14,4 @@ const Hike = db.define('hike', {
    image_url: { type: Sequelize.TEXT }
  });
 
- module.exports = Marker;
+ module.exports = Hike;

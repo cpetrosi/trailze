@@ -9,7 +9,8 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start && node server/index.js",
+    "start": "react-native-scripts start",
+    "start-both": "concurrently \"react-native-scripts start\" \"nodemon server\"",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
@@ -19,8 +20,12 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "brew": "^0.0.8",
+    "concurrently": "^3.5.1",
+    "connect-history-api-fallback": "^1.5.0",
     "expo": "^26.0.0",
+    "express": "^4.16.3",
     "google-maps-react": "^2.0.0",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
@@ -32,7 +37,10 @@
     "react-native-extended-stylesheet": "^0.8.1",
     "react-native-maps": "^0.21.0",
     "react-navigation": "^1.5.11",
-    "sequelize": "^4.37.6"
+    "sequelize": "^4.37.6",
+    "webpack": "^4.6.0",
+    "webpack-dev-middleware": "^3.1.2",
+    "webpack-hot-middleware": "^2.22.1"
   },
   "proxy": "http://localhost:8000"
 }

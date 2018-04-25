@@ -2,8 +2,8 @@
   The queries that have to do with the Marker table are defined here.
 **/
 
-const db = require("../../db"); // eslint-disable-line no-unused-vars
-const Form = require("../../db/models/marker");
+const db = require("../db"); // eslint-disable-line no-unused-vars
+const Form = require("../db/models/marker");
 
 const router = require("express").Router();
 

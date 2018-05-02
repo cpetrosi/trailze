@@ -99,7 +99,35 @@ const seedHikes = () => db.Promise.map([
                         'lots of fragrant sages to keep you company along the way, and you’ll also pass the remnants of a few rusted' +
                         'out old cars deep in the canyons!',
           image_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/f0gbUft_jiSAPaFCV1fb_Q/o.jpg'
-        }
+        },
+
+        {
+           name: 'Venice Canals Trail',
+           average_rating: 0,
+           num_of_raters: 0,
+           lat: 33.9874758,
+           long: -118.4697474,
+           description: 'The Venice Canals are a pastoral residential retreat. Six interwoven water canals flow ' +
+                        'through this charming neighborhood with walking paths beside the canals. Based on the canals' +
+                        ' of Venice, Italy, Abbott Kinney’s "Venice of America" was completed in 1905. Landscaped ' +
+                        'walkways and diverse architecture make this walk an enchanting visual experience. Fourteen bridges ' +
+                        'and well-maintained walkways allow flexibility to walk around all six canals for any distance,' +
+                        ' direction, or length of time. Canoes, paddle boats, and ducks frequent the waterways.',
+           image_url: 'https://i.ytimg.com/vi/l_o1V-LNw9o/maxresdefault.jpg'
+         },
+
+         {
+            name: 'Kenneth Hahn Recreation Area',
+            average_rating: 0,
+            num_of_raters: 0,
+            lat: 34.0078314,
+            long: -118.3663518,
+            description: 'Kenneth Hahn State Recreation Area, or Hahn Park, is a state park unit of California in' +
+                          ' the Baldwin Hills Mountains of Los Angeles. The park is managed by the Los Angeles County Department of' +
+                          ' Parks and Recreation.[1] As one of the largest urban parks and regional open spaces in the Greater Los ' +
+                          'Angeles Area, many have called it "L.A.’s Central Park". The 401-acre park was established in 1984.',
+            image_url: 'https://www.californiabeaches.com/wp-content/uploads/2016/05/Screen-Shot-2013-06-24-at-1.34.48-PM-e1464387757184.png'
+          }
 ], hike => db.model('hike').create(hike));
 
 db.didSync

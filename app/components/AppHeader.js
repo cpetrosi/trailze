@@ -1,10 +1,11 @@
 import React from 'react';
 import { Header } from 'react-native-elements';
 
-const AppHeader = ({ headerText }) => (
+const AppHeader = (props) => (
   <Header
-    centerComponent={{ text: headerText, style: {color: 'white'} }}
-    outerContainerStyles={{ backgroundColor: '#cdaf95' }}
+    leftComponent={{ icon: 'menu', color: 'white', onPress: () => console.log('pressed') }}
+    centerComponent={{text: 'trailze', style: { color: 'white', fontSize: 30, fontFamily: 'System', bottom: -10 }}}
+    outerContainerStyles={{ backgroundColor: '#4b8b3b', flex: 1 }}
   />
 );
 

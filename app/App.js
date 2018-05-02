@@ -1,44 +1,51 @@
 import React from 'react';
-import { View } from 'react-native';
-import { TabNavigator } from 'react-navigation';
-import SearchBar from './components/SearchBar';
-import AppHeader from './components/AppHeader';
-import MapViews from './components/MapViews';
+import { View, Image } from 'react-native';
+import { Header } from 'react-native-elements';
+import ListView from './components/ListView';
+import MapView from './components/MapView';
 
-const API_KEY = 'AIzaSyAmsdTMY6U_Ac5i21bYQaPRpesyG7o4cpY';
+import map from './resources/map.png';
 
-class SearchScreen extends React.Component {
-  onPressSearch = term => {
-    console.log(term);
+export default class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      page: 'map'
+    }
   }
+  
+  renderHeader = () => (
+    <Header
+      leftComponent={{ icon: 'menu', color: 'white', onPress: () => this.setState({ page: 'list' })}}
+      centerComponent={{ text: 'trailze', style: { color: 'white', fontSize: 30, fontFamily: 'System', bottom: -10 } }}
+      rightComponent={{ icon: 'home', color: 'white', onPress: () => this.setState({ page: 'map' })}}
+      outerContainerStyles={{ backgroundColor: '#4b8b3b', flex: 1 }}
+    />
+  );
+  
   render() {
-    return (
+    if (this.state.page === 'list') {
+      return (
       <View style={{ flex: 1, backgroundColor: '#ddd' }}>
-        <AppHeader
-          headerText="Trailze"
-        />
-        <SearchBar
-          onPressSearch={this.onPressSearch}
-        />
+          <View style={{ flex: 0.1 }}>
+            {this.renderHeader('map')}
+          </View>
+          <View style={{ flex: 0.9 }}>
+            <ListView />
+          </View>
       </View>
-    );
+      )
+    } else if (this.state.page === 'map') {
+      return (
+        <View style={{ flex: 1 }}>
+          <View style={{ flex: 0.1 }}>
+            {this.renderHeader('list')}
+          </View>
+          <View style={{ flex: 0.9 }}>
+            <MapView/>
+          </View>
+      </View>
+      )
+    }
   }
 }
-
-class MapScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, backgroundColor: '#ddd' }}>
-        <AppHeader
-          headerText="Trailze"
-        />
-        <MapViews />
-      </View>
-    );
-  }
-}
-
-export default TabNavigator({
-  Search: { screen: SearchScreen },
-  Map: { screen: MapScreen },
-});
